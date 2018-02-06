@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <div class="container my-5 py-5 mr-5">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body px-5">
+                        <form method="POST" id="eok-form" class="authentication-forms">
+                            <figure class="text-center mt-3 mb-3">
+                                <img src="images/Logo.png" class="img img-responsive" alt="logo" width="250">
+                            </figure>
+                            <div class="fm-group">
+                                <label for="">Username</label>
+                                <input type="text" class="fm-control" name="username" id="username" placeholder="Enter Username" />
+                                <div class="fm-errors">
+                                    Please enter a valid username.
+                                </div>
+                            </div>
+
+                            <div class="fm-group">
+                                <label for="">Password</label>
+                                <input type="text" class="fm-control" name="password" id="password" placeholder="Enter Password" />
+                                <div class="fm-errors">
+                                    Please enter a valid password.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="eok-btn eok-btn-primary btn-block">Sign In</button>
+
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-primary text-center pt-4">Forgot Password?</p>
+                                </div>
+
+                                <div class="col">
+                                    <p class="text-primary text-center pt-4">Create Account</p>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script>
+        window.loginPage = {
+            validateForm: function () {
+                var form = $('#eok-form');
+
+                form.validate({
+                    rules: {
+                        username: {
+                            required: true
+                        },
+                        password: {
+                            required: true
+                        }
+                    },
+                    highlight: function (elm) {
+                        $(elm).closest('.fm-group').addClass('has-error');
+                    },
+                    success: function (elm) {
+                        $(elm).closest('.fm-group').removeClass('has-error');
+                    },
+                    submitHandler: function (f) {
+                        $(f).submit();
+                    }
+                })
+            },
+            init: function () {
+                this.validateForm();
+            }
+        }
+        window.loginPage.init();
+    </script>
+
+</body>
+
+</html>

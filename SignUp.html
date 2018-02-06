@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head> 
+<body>
+    <div class="container my-5 py-5 mr-5">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body px-5">
+                        <form method="POST" id="eok-form" class="authentication-forms">
+                            <figure class="text-center mt-3 mb-3">
+                                <img src="images/Logo.png" class="img img-responsive" alt="logo" width="250">
+                            </figure>
+                            <div class="fm-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="fm-control" id="username" name="username" placeholder="Username" />
+                                <div class="fm-errors">
+                                    Please enter a valid username.
+                                </div>
+                            </div>
+                            <div class="fm-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="fm-control" id="email" name="email" placeholder="Email" />
+                                <div class="fm-errors">
+                                    Please enter a valid email.
+                                </div>
+                            </div>
+                            <div class="fm-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="fm-control" id="password" name="password" placeholder="Password" />
+                                <div class="fm-errors">
+                                    Please enter a valid password.
+                                </div>
+                            </div>
+                            <div class="fm-group">
+                                <button type="submit" class="eok-btn eok-btn-primary col-md-12">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script>
+        window.SignUpPage = {
+            validateForm: function() {
+                var form = $('#eok-form');
+
+                form.validate({
+                    rules: {
+                        username: {
+                            required: true
+                        },
+                        password: {
+                            required: true
+                        },
+                        email: {
+                            email: true,
+                            required: true
+                        }
+                    },
+                    highlight: function(elm) {
+                        $(elm).closest('.fm-group').addClass('has-error');
+                    },
+                    success: function(elm) {
+                        $(elm).closest('.fm-group').removeClass('has-error');
+                    },
+                    submitHandler: function(f) {
+                        $(f).submit();
+                    }
+                })
+            },
+            init: function() {
+                this.validateForm();
+            }
+        }
+        window.SignUpPage.init();
+    </script>
+</body>
+</html>
