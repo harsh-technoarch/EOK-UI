@@ -85,14 +85,17 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <select id="example-getting-started" multiple="multiple">
-                                    <option value="cheese">Cheese</option>
-                                    <option value="tomatoes">Tomatoes</option>
-                                    <option value="mozarella">Mozzarella</option>
-                                    <option value="mushrooms">Mushrooms</option>
-                                    <option value="pepperoni">Pepperoni</option>
-                                    <option value="onions">Onions</option>
+                                <div class="fm-group">
+                                <select id="days" class="fm-control" multiple="multiple">
+                                    <option value="mon">Monday</option>
+                                    <option value="tue">Tuesday</option>
+                                    <option value="wed">Wednesday</option>
+                                    <option value="thurs">Thursday</option>
+                                    <option value="fri">Friday</option>
+                                    <option value="sat">Saturday</option>
+                                    <option value="sun">Sunday</option>
                                 </select>
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -137,6 +140,7 @@
 
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/bootstrap-multiselect.js"></script>
@@ -148,7 +152,7 @@
         });
         /* Multi-select*/
         $(document).ready(function () {
-            $('#example-getting-started').multiselect();
+            $('#days').multiselect();
         });
         /* When the user clicks on the button, 
                     toggle between hiding and showing the dropdown content */

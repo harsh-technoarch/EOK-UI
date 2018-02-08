@@ -14,7 +14,7 @@ body {
 
 .center-wrapper{
  
-     margin-top: 300px;   
+     margin-top: 20%;   
 }
 .eok-btn {
     display: inline-block;
@@ -269,3 +269,4 @@ padding-right: 80px;
 .search-wrapper .eok-btn-primary {
     padding: .375rem 3.5rem;
 }
+
