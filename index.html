@@ -1,14 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Homepage - EnRichOurKids</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css">
     <link rel="stylesheet" href="css/custom.css">
+
+
 </head>
-<body>
-    
+
+<body class="home-bg">
+
+
+    <header>
+        <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/header-logo.png" width="251">
+            </a>
+            <div class="eok-nav-links">
+                <a href="#">Business</a>
+                <a href="SignUp.html">Sign Up</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="center-wrapper">
+            <div class="row justify-content-center">
+                <div class="input-group search-wrapper">
+                    <input type="text" class="form-control" placeholder="Search" data-toggle="collapse" data-target="#filter" aria-expanded="false"
+                        aria-controls="filter" />
+
+                    <div class="input-group-btn">
+                        <button class="eok-btn eok-btn-primary" type="button">
+                            <i class="glyphicon glyphicon-search">Search</i>
+                    </div>
+                </div>
+
+                <div class="col collapse pt-4 " id="filter">
+                    <div class="card eok-card">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="Zipcode" id="zipcode" class="fm-control" placeholder="Zipcode" />
+                            </div>
+                            <div class="col">
+                                <input type="number" name="age" id="age" class="fm-control" placeholder="Age" />
+                            </div>
+                            <div class="col">
+                                <input type="text" format="mm-dd-yyyy" name="datepicker" id="datepicker" class="fm-control" placeholder="Start Date" />
+                            </div>
+                        </div>
+                        <div class="row pt-4 ">
+                            <div class="col">
+                                <div class="fm-group">
+                                    <select class="fm-control" id="distnace">
+                                        <option>Distance</option>
+                                        <option>1 Miles</option>
+                                        <option>5 Miles</option>
+                                        <option>10 Miles</option>
+                                        <option>15 Miles</option>
+                                        <option>20 Miles</option>
+                                        <option>20+ Miles</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="fm-group">
+                                    <select class="fm-control" id="distnace">
+                                        <option>Price / ClassMax</option>
+                                        <option> $5 </option>
+                                        <option> $10 </option>
+                                        <option> $15 </option>
+                                        <option> $20</option>
+                                        <option> $25</option>
+                                        <option> $25+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <select id="example-getting-started" multiple="multiple">
+                                    <option value="cheese">Cheese</option>
+                                    <option value="tomatoes">Tomatoes</option>
+                                    <option value="mozarella">Mozzarella</option>
+                                    <option value="mushrooms">Mushrooms</option>
+                                    <option value="pepperoni">Pepperoni</option>
+                                    <option value="onions">Onions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <form>
+                                <div class="category-button-wrapper">
+                                    <label for="categoryAll" class="category-label">
+                                        <input type="radio" name="category" class="radio" id="categoryAll" />
+                                        <div class="category-button">All</div>
+                                    </label>
+                                    <label for="categoryMusicArts" class="category-label">
+                                        <input type="radio" name="category" class="radio" value="Music & Arts" id="categoryMusicArts" />
+                                        <div class="category-button">Music & Arts</div>
+                                    </label>
+                                    <label for="categoryFitness" class="category-label">
+                                        <input type="radio" name="category" class="radio" value="Sports & Fitness" id="categoryFitness" />
+                                        <div class="category-button">Sports & Fitness</div>
+                                    </label>
+                                    <label for="categoryReading" class="category-label">
+                                        <input type="radio" name="category" class="radio" id="categoryReading" />
+                                        <div class="category-button">Maths & Reading</div>
+                                    </label>
+                                    <label for="categoryScience" class="category-label">
+                                        <input type="radio" name="category" class="radio" id="categoryScience" />
+                                        <div class="category-button">Science & Engineering</div>
+                                    </label>
+                                    <label for="categoryTechnology" class="category-label">
+                                        <input type="radio" name="category" class="radio" id="categoryTechnology" />
+                                        <div class="category-button">Technology</div>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        /* Date Piker Jquery-UI */
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+        /* Multi-select*/
+        $(document).ready(function () {
+            $('#example-getting-started').multiselect();
+        });
+        /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

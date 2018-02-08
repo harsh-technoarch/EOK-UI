@@ -1,8 +1,21 @@
-html,
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    .home-bg {
+        background: url(/images/background.JPG) no-repeat center center fixed;
+    }
 body {
     background-color: #F7F7F7;
 }
 
+
+.center-wrapper{
+ 
+     margin-top: 300px;   
+}
 .eok-btn {
     display: inline-block;
     font-weight: 400;
@@ -87,12 +100,23 @@ input {
 .card-body {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, .16);
     border-radius: 14px;
+    
 }
 
 .card {
     border: none;
+
 }
 
+
+.eok-card {
+  
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-right:40px;
+    padding-left: 40px;  
+    background-color:#F4F4F4
+}
 .fm-control {
     display: block;
     width: 100%;
@@ -166,4 +190,82 @@ label.error {
 
 .authentication-forms .fm-group {
     margin-bottom: 34px;
+}
+
+
+.eok-nav-links a {
+
+text-decoration: none;
+color: white;
+padding-right: 80px;     
+ 
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 25px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+
+
+.category-button-wrapper {
+    position: relative;
+    
+}
+
+.category-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .16);
+    margin-left: 13px;
+}
+
+.category-label {
+    margin-right: 5px;
+}
+
+.category-label .radio {
+    position: absolute;
+    left: 100%;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    clip: rect(0,0,0,0);
+    z-index: -100;
+}
+
+.category-label .radio:checked + .category-button {
+    background: #F39236;
+    color: #fff;
+}
+
+.search-wrapper .eok-btn-primary {
+    padding: .375rem 3.5rem;
 }
