@@ -24,9 +24,10 @@
             </a>
         </div>
         <div class="eok-navbar-navigation">
-            <button class="eok-nav-toggle"><img src="images/menu-icon.png"></button>
-          
-        
+            <button class="eok-nav-toggle">
+                <img src="images/menu-icon.png">
+            </button>
+
             <ul class="nav-wrapper">
                 <li>
                     <a href="">Business</a>
@@ -147,70 +148,50 @@
             </div>
     </section>
 
-        <footer class="footer text-center">
-            <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
+    <footer class="footer text-center">
+        <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
 
-        </footer>
+    </footer>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        window.BaseScripts = {
+            navToggle: function() {
+                var trigger = $('.eok-nav-toggle');
+                var target = $('.nav-wrapper');
 
+                console.log(trigger)
 
+                trigger.on('click', function() {
+                    console.log('here')
+                    target.toggle();
+                });
+            },
+            init: function() {
+                this.navToggle();
+            }
+        }
 
-
-
-
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/bootstrap-multiselect.js"></script>
-        <script src="js/custom.js"></script>
-        <script>
-        
-
-            $(document).ready(function() {
-    if (window.innerWidth < 768) {
-        $('.eok-nav-toggle').click(function() {
-            $('.nav-wrapper').toggle();
-        })   
-    }
-})
-
-
-            /* Date Piker Jquery-UI */
-            $(function () {
-                $("#datepicker").datepicker();
-            });
-            /* Multi-select*/
-            $(document).ready(function () {
+        window.LandingPage = {
+            init: function() {
                 $('#days').multiselect({
                     buttonClass: 'fm-control',
                     buttonWidth: '100%',
                     numberDisplayed: 2,
                     includeSelectAllOption: true
                 });
-            });
-            /* When the user clicks on the button, 
-                        toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
+                $("#datepicker").datepicker();
             }
+        }
 
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function (event) {
-                if (!event.target.matches('.dropbtn')) {
-
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
-        </script>
+        window.BaseScripts.init();
+        window.LandingPage.init();
+    </script>
 </body>
 
 </html>
