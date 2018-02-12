@@ -17,23 +17,37 @@
 
 <body>
 
-    <div class="section home-bg" style="background: url(/images/background.JPG) no-repeat center center fixed;">
+    <header class="eok-navbar-main">
+        <div class="brand-logo">
+            <a href="/">
+                <img src="images/header-logo.png">
+            </a>
+        </div>
+        <div class="eok-navbar-navigation">
+            <button class="eok-nav-toggle"><img src="images/menu-icon.png"></button>
+          
+        
+            <ul class="nav-wrapper">
+                <li>
+                    <a href="">Business</a>
+                </li>
+                <li>
+                    <a href="">Sign Up</a>
+                </li>
+                <li>
+                    <a href="">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-        <header>
-                <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 text-center">
-                        <h5 class="my-0 mr-md-auto font-weight-normal"><img class="img img-responsive" src="/images/header-logo.png" width="251"></h5>
-                        <nav class="my-2 my-md-0 mr-md-3">
-                          <a class="p-2 text-dark" href="addbusiness.html">Business</a>
-                          <a class="p-2 text-dark" href="SignUp.html">Sign Up</a>
-                          <a class="p-2 text-dark" href="login.html">Login</a>
-                        </nav>
-            </div>
-            </header>
-
+    <section class="section section-intro">
+        <div class="overlay-image background-cover background-center" style="background-image: url(images/background.jpg)"></div>
         <div class="container">
-            <div class="center-wrapper">
-                <div class="row justify-content-center">
-                    <div class="col-12 input-group search-wrapper">
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 1000px;padding-top :200px;">
+                    <div class="col-md-12 input-group search-wrapper">
+
                         <input type="text" class="form-control" placeholder="Search" data-toggle="collapse" data-target="#filter" aria-expanded="false"
                             aria-controls="filter" />
 
@@ -131,92 +145,72 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer class="footer text-center">
-        <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
+    </section>
 
-    </footer>
+        <footer class="footer text-center">
+            <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
 
-
+        </footer>
 
 
 
 
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/bootstrap-multiselect.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        (function ($) {
-            // Begin jQuery
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap-multiselect.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+        
+
+            $(document).ready(function() {
+    if (window.innerWidth < 768) {
+        $('.eok-nav-toggle').click(function() {
+            $('.nav-wrapper').toggle();
+        })   
+    }
+})
+
+
+            /* Date Piker Jquery-UI */
             $(function () {
-                // DOM ready
-                // If a link has a dropdown, add sub menu toggle.
-                $("nav ul li a:not(:only-child)").click(function (e) {
-                    $(this)
-                        .siblings(".nav-dropdown")
-                        .toggle();
-                    // Close one dropdown when selecting another
-                    $(".nav-dropdown")
-                        .not($(this).siblings())
-                        .hide();
-                    e.stopPropagation();
-                });
-                // Clicking away from dropdown will remove the dropdown class
-                $("html").click(function () {
-                    $(".nav-dropdown").hide();
-                });
-                // Toggle open and close nav styles on click
-                $("#nav-toggle").click(function () {
-                    $("nav ul").slideToggle();
-                });
-                // Hamburger to X toggle
-                $("#nav-toggle").on("click", function () {
-                    this.classList.toggle("active");
-                });
-            }); // end DOM ready
-        })(jQuery); // end jQuery
-
-
-        /* Date Piker Jquery-UI */
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-        /* Multi-select*/
-        $(document).ready(function () {
-            $('#days').multiselect({
-                buttonClass: 'fm-control',
-                buttonWidth: '100%',
-                numberDisplayed: 2,
-                includeSelectAllOption: true
+                $("#datepicker").datepicker();
             });
-        });
-        /* When the user clicks on the button, 
-                    toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+            /* Multi-select*/
+            $(document).ready(function () {
+                $('#days').multiselect({
+                    buttonClass: 'fm-control',
+                    buttonWidth: '100%',
+                    numberDisplayed: 2,
+                    includeSelectAllOption: true
+                });
+            });
+            /* When the user clicks on the button, 
+                        toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
 
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
                     }
                 }
             }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
