@@ -6,7 +6,10 @@ html {
 }
 
 .home-bg {
-    background: url(/images/background.JPG) no-repeat center center fixed;
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 body {
@@ -92,11 +95,6 @@ button:focus {
 
 img {
     max-width: 100%;
-}
-
-input {
-    height: 60px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, .16);
 }
 
 .card-body {
@@ -268,6 +266,10 @@ label.error {
 .navigation {
     height: 70px;
     background: transparent;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .brand {
@@ -292,6 +294,7 @@ label.error {
 
 nav {
     float: right;
+    
 }
 
 nav ul {
@@ -337,6 +340,7 @@ nav ul li ul li a {
 }
 
 .nav-dropdown {
+    
     position: absolute;
     display: none;
     z-index: 1;
@@ -356,9 +360,6 @@ nav ul li ul li a {
 }
 
 @media only screen and (max-width: 798px) {
-    .center-wrapper {
-        margin-top: 250px;
-    }
     .nav-mobile {
         display: block;
     }
@@ -381,6 +382,7 @@ nav ul li ul li a {
     }
     .nav-dropdown {
         position: absolute;
+        
     }
 }
 
@@ -435,4 +437,25 @@ nav ul li ul li a {
 
 #nav-toggle.active span:after {
     transform: rotate(-45deg);
+}
+
+.multiselect-container.dropdown-menu.show {
+    right: 0
+}
+
+.multiselect-container>li>a>label {
+    padding: 3px 10px 3px 10px
+}
+
+.multiselect-container>li>a>label>input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
 }

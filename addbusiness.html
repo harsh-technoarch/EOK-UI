@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-12">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage - EnRichOurKids</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui-style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
+<body>
+
+    <header class="eok-btn-primary">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-12 mb-3 text-center">
+            <h5 class="my-0 mr-md-auto font-weight-normal">
+                <img class="img img-responsive" src="/images/header-logo.png" width="251">
+            </h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="addbusiness.html">Business</a>
+                <a class="p-2 text-dark" href="SignUp.html">Sign Up</a>
+                <a class="p-2 text-dark" href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="horizontal-form">
+                                    <figure class="text-center mt-3 mb-3">
+                                            <img src="images/Logo.png" class="img img-responsive" alt="logo" width="250">
+                                        </figure>
+                                  <h2 class="text-center pb-4">Add Business Details</h2> 
+                                    <!-- Text input-->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="classname">Class Name</label>
+                                        <div class="col-md-12">
+                                            <input id="product_id" name="classname" placeholder="Class Name" class="fm-control input-md" required="" type="text">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="product_name">Select Catagory</label>
+                                        <div class="col-md-12">
+                                            <label for="categoryAll" class="category-label">
+                                                <input type="radio" name="category" class="radio" id="categoryAll" />
+                                                <div class="category-button">All</div>
+                                            </label>
+                                            <label for="categoryMusicArts" class="category-label">
+                                                <input type="radio" name="category" class="radio" value="Music & Arts" id="categoryMusicArts" />
+                                                <div class="category-button">Music & Arts</div>
+                                            </label>
+                                            <label for="categoryFitness" class="category-label">
+                                                <input type="radio" name="category" class="radio" value="Sports & Fitness" id="categoryFitness" />
+                                                <div class="category-button">Sports & Fitness</div>
+                                            </label>
+                                            <label for="categoryReading" class="category-label">
+                                                <input type="radio" name="category" class="radio" id="categoryReading" />
+                                                <div class="category-button">Maths & Reading</div>
+                                            </label>
+                                            <label for="categoryScience" class="category-label">
+                                                <input type="radio" name="category" class="radio" id="categoryScience" />
+                                                <div class="category-button">Science & Engineering</div>
+                                            </label>
+                                            <label for="categoryTechnology" class="category-label">
+                                                <input type="radio" name="category" class="radio" id="categoryTechnology" />
+                                                <div class="category-button">Technology</div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="description">Description</label>
+                                        <div class="col-md-12">
+
+                                            <textarea class="fm-control" id="description" placeholder="Class description"></textarea>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Select Basic -->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="datepicker">Start Date</label>
+                                        <div class="col-md-12">
+                                            <input type="text" format="mm-dd-yyyy" name="datepicker" id="datepicker" class="fm-control" placeholder="Start Date" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="datepicker">End Date</label>
+                                        <div class="col-md-12">
+                                            <input type="text" format="mm-dd-yyyy" name="datepicker2" id="datepicker2" class="fm-control" placeholder="End Date" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="NoOfClass">No. Of Classes</label>
+                                        <div class="col-md-12">
+                                            <input id="NoOfClass" name="NoOfClass" placeholder="No. of Class" class="fm-control input-md" required="" type="text">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="days">Days</label>
+                                        <div class="col-md-12">
+                                            <select id="days" class="fm-control" multiple="multiple">
+                                                <option value="mon">Monday</option>
+                                                <option value="tue">Tuesday</option>
+                                                <option value="wed">Wednesday</option>
+                                                <option value="thurs">Thursday</option>
+                                                <option value="fri">Friday</option>
+                                                <option value="sat">Saturday</option>
+                                                <option value="sun">Sunday</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Textarea -->
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="Starttime">Start Time</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Start Time" id="starttime" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="endtime">End Time</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="End Time" id="endtime" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="minage">Min Age</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Min Age" id="minage" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="maxage">Max Age</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Max Age" id="maxage" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="cost">Total session Cost</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="$" id="cost" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="businessname">Bussiness Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Business Name" id="businessname" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="website">Website URL</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="http://" id="website" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="location">Class Location</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Class Location" id="location" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="address">Address</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Address" id="address" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="city">City</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="City" id="city" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="zipcode">Zipcode</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Zipcode" id="zipcode" />
+                                        </div>
+                                    </div>
+
+                                    <div class="fm-group">
+                                        <label class="col-md-12" for="phone">Phone Number</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="fm-control" placeholder="Phone No." id="phone" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="fm-group">
+                                        <div class="col-md-12">
+                                            <button id="add" name="add" class="eok-btn eok-btn-primary col-md-12">Add Bussiness</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer text-center">
+                <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
+        
+            </footer>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+        /* Date Piker Jquery-UI */
+        $(function () {
+            $("#datepicker , #datepicker2").datepicker();
+        });
+        /* Multi-select*/
+        $(document).ready(function () {
+            $('#days').multiselect({
+                buttonClass: 'fm-control',
+                buttonWidth: '100%',
+                numberDisplayed: 2,
+                includeSelectAllOption: true
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
