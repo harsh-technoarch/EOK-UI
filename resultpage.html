@@ -9,215 +9,282 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/jquery-ui-style.css" type="text/css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.timepicker.min.css" type="text/css">
     <link rel="stylesheet" href="css/custom.css">
 
 
 </head>
 
 <body>
+    <header class="eok-navbar-main eok-btn-primary relative">
+        <div class="brand-logo">
+            <a href="/">
+                <img src="images/header-logo.png">
+            </a>
+        </div>
+        <div class="eok-navbar-navigation">
+            <div class="eok-nav-toggle">
+                <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+            </div>
 
-
-<header>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-warning border-bottom box-shadow">
-                <h5 class="my-0 mr-md-auto font-weight-normal"><img class="img img-responsive" src="/images/header-logo.png" width="251"></h5>
-                <nav class="my-2 my-md-0 mr-md-3">
-                  <a class="p-2 text-dark" href="#">Business</a>
-                  <a class="p-2 text-dark" href="SignUp.html">Sign Up</a>
-                  <a class="p-2 text-dark" href="login.html">Login</a>
-                </nav>
-    </div>
+            <ul class="nav-wrapper">
+                <li>
+                    <a href="">Business</a>
+                </li>
+                <li>
+                    <a href="">Sign Up</a>
+                </li>
+                <li>
+                    <a href="">Sign In</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
-    <div class="cointainer col-xs-2 col-lg-3 col-sm-4 col-xl-2 py-2 my-4">
-
-            <div class="col card-body">
-
-                <div class="row">
-                    <div class="col">
-                        <h5 class="text-center">Filters</h5>
-                        <input type="text" name="Zipcode" id="zipcode" class="fm-control" placeholder="Zipcode" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="number" name="age" id="age" class="fm-control" placeholder="Age" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" format="mm-dd-yyyy" name="datepicker" id="datepicker" class="fm-control" placeholder="Start Date" />
-                    </div>
-                </div>
-
-                <div class="row pt-4 ">
-                    <div class="col">
-                        <div class="fm-group">
-                            <select class="fm-control" id="distnace">
-                                <option>Distance</option>
-                                <option>1 Miles</option>
-                                <option>5 Miles</option>
-                                <option>10 Miles</option>
-                                <option>15 Miles</option>
-                                <option>20 Miles</option>
-                                <option>20+ Miles</option>
-                            </select>
+    <!-- Mobile View Filters Ends -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col eok-aside">
+                <div class="eok-filter-sidebar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Filters</h5>
+                            <input type="text" name="Zipcode" id="zipcode" class="fm-control" placeholder="Zipcode" />
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="fm-group">
-                            <select class="fm-control" id="distnace">
-                                <option>Price / ClassMax</option>
-                                <option> $5 </option>
-                                <option> $10 </option>
-                                <option> $15 </option>
-                                <option> $20</option>
-                                <option> $25</option>
-                                <option> $25+</option>
-                            </select>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="number" name="age" id="age" class="fm-control" placeholder="Age" />
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="fm-group">
-                            <select id="days" class="fm-control" multiple="multiple">
-                                <option value="mon">Monday</option>
-                                <option value="tue">Tuesday</option>
-                                <option value="wed">Wednesday</option>
-                                <option value="thurs">Thursday</option>
-                                <option value="fri">Friday</option>
-                                <option value="sat">Saturday</option>
-                                <option value="sun">Sunday</option>
-                            </select>
+                    <div class="mt-2">From</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex mb-2" id="datetime">
+                                <input type="text" placeholder=" Date" class="fm-control date start w-100" />
+                                <input type="text" placeholder=" Time" class="fm-control time start w-100" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <h5 class="text-center">Catagories</h5>
-                        <form>
-                            <div class="category-button-wrapper">
-                                <label for="categoryAll" class="category-label">
+                    <div>To</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex fm-group" id="datetime">
+                                <input type="text" placeholder="Date" class="fm-control date end w-100" />
+                                <input type="text" placeholder="Time" class="fm-control time end w-100" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="fm-group">
+                                <select class="fm-control" id="distnace">
+                                    <option>Distance</option>
+                                    <option>1 Miles</option>
+                                    <option>2 Miles</option>
+                                    <option>10 Miles</option>
+                                    <option>15 Miles</option>
+                                    <option>20 Miles</option>
+                                    <option>20+ Miles</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="fm-group">
+                                <select class="fm-control" id="distnace">
+                                    <option>Price / ClassMax</option>
+                                    <option> $2 </option>
+                                    <option> $10 </option>
+                                    <option> $12 </option>
+                                    <option> $20</option>
+                                    <option> $22</option>
+                                    <option> $22+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="fm-group">
+                                <select id="days" class="fm-control" multiple="multiple">
+                                    <option value="mon">Monday</option>
+                                    <option value="tue">Tuesday</option>
+                                    <option value="wed">Wednesday</option>
+                                    <option value="thurs">Thursday</option>
+                                    <option value="fri">Friday</option>
+                                    <option value="sat">Saturday</option>
+                                    <option value="sun">Sunday</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Catagories</h5>
+                            <div class="filter-category-wrapper">
+                                <label for="categoryAll" class="filter-category-label">
                                     <input type="radio" name="category" class="radio" id="categoryAll" />
-                                    <div class="category-button">All</div>
+                                    <div class="filter-category-button">All</div>
                                 </label>
-                                <label for="categoryMusicArts" class="category-label">
+                                <label for="categoryMusicArts" class="filter-category-label">
                                     <input type="radio" name="category" class="radio" value="Music & Arts" id="categoryMusicArts" />
-                                    <div class="category-button">Music & Arts</div>
+                                    <div class="filter-category-button">Music & Arts</div>
+                                </label>
+                                <label for="categoryFitness" class="filter-category-label">
+                                    <input type="radio" name="category" class="radio" value="Sports & Fitness" id="categoryFitness" />
+                                    <div class="filter-category-button">Sports & Fitness</div>
+                                </label>
+                                <label for="categoryReading" class="filter-category-label">
+                                    <input type="radio" name="category" class="radio" id="categoryReading" />
+                                    <div class="filter-category-button">Maths & Reading</div>
+                                </label>
+                                <label for="categoryScience" class="filter-category-label">
+                                    <input type="radio" name="category" class="radio" id="categoryScience" />
+                                    <div class="filter-category-button">Science & Engineering</div>
+                                </label>
+                                <label for="categoryTechnology" class="filter-category-label">
+                                    <input type="radio" name="category" class="radio" id="categoryTechnology" />
+                                    <div class="filter-category-button">Technology</div>
                                 </label>
                             </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <label for="categoryFitness" class="category-label">
-                            <input type="radio" name="category" class="radio" value="Sports & Fitness" id="categoryFitness" />
-                            <div class="category-button">Sports & Fitness</div>
-                        </label>
-                        <label for="categoryReading" class="category-label">
-                            <input type="radio" name="category" class="radio" id="categoryReading" />
-                            <div class="category-button">Maths & Reading</div>
-                        </label>
+            </div>
+            <div class="col-12 d-md-none d-xl-none d-lg-none">
+                <hr>
+            </div>
+            <div class="col mt-4">
+                <h3 class="mb-4 text-muted">Showing results for "query"</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col" style="max-width:220px">
+                                <img src="images/bg1.jpg" width="100%">
+                            </div>
+                            <div class="col-12 d-md-none d-xl-none d-lg-none"></div>
+                            <div class="col">
+                                <h4>Class Name</h4>
+                                <h6>Business Name</h6>
+                                <p>IPhone salvia YOLO paleo pitchfork etsy cliche tofu meh mlkshk schlitz blue bottle adaptogen
+                                    wolf tousled. Kogi readymade kale chips enamel pin activated charcoal. Microdosing man
+                                    bun drinking vinegar truffaut retro yr. Fanny pack chia four dollar toast before they
+                                    sold out austin shoreditch taxidermy roof party microdosing cronut vexillologist bitters
+                                    fingerstache waistcoat marfa.</p>
+
+                                <div class="col">
+                                    <span class="eok-tags">Days</span>
+                                    <span class="eok-tags">Date</span>
+                                    <span class="eok-tags">Total Cost</span>
+                                    <span class="eok-tags">Age</span>
+                                    <span class="eok-tags">Address</span>
+                                    <span class="eok-tags">Phone</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <label for="categoryScience" class="category-label">
-                            <input type="radio" name="category" class="radio" id="categoryScience" />
-                            <div class="category-button">Science & Engineering</div>
-                        </label>
-                        <label for="categoryTechnology" class="category-label">
-                            <input type="radio" name="category" class="radio" id="categoryTechnology" />
-                            <div class="category-button">Technology</div>
-                        </label>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col" style="max-width:220px">
+                                <img src="images/bg1.jpg" width="100%">
+                            </div>
+                            <div class="col-12 d-md-none d-xl-none d-lg-none"></div>
+                            <div class="col">
+                                <h4>Class Name</h4>
+                                <h6>Business Name</h6>
+                                <p>IPhone salvia YOLO paleo pitchfork etsy cliche tofu meh mlkshk schlitz blue bottle adaptogen
+                                    wolf tousled. Kogi readymade kale chips enamel pin activated charcoal. Microdosing man
+                                    bun drinking vinegar truffaut retro yr. Fanny pack chia four dollar toast before they
+                                    sold out austin shoreditch taxidermy roof party microdosing cronut vexillologist bitters
+                                    fingerstache waistcoat marfa.</p>
+
+                                <div class="col">
+                                    <span class="eok-tags">Days</span>
+                                    <span class="eok-tags">Date</span>
+                                    <span class="eok-tags">Total Cost</span>
+                                    <span class="eok-tags">Age</span>
+                                    <span class="eok-tags">Address</span>
+                                    <span class="eok-tags">Phone</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </form>
             </div>
         </div>
-    </div>
- 
-    <footer class="footer text-center">
-            <span class="text-muted">Copyright © 2018 EnRichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
-      
+
+        <footer class="footer text-center">
+            <span class="text-muted">Copyright © 2018 EnrichOurKids. All rights reserved. | Terms of Use | Privacy Policy</span>
         </footer>
 
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/multiselect.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        (function ($) {
-            // Begin jQuery
-            $(function () {
-                // DOM ready
-                // If a link has a dropdown, add sub menu toggle.
-                $("nav ul li a:not(:only-child)").click(function (e) {
-                    $(this)
-                        .siblings(".nav-dropdown")
-                        .toggle();
-                    // Close one dropdown when selecting another
-                    $(".nav-dropdown")
-                        .not($(this).siblings())
-                        .hide();
-                    e.stopPropagation();
-                });
-                // Clicking away from dropdown will remove the dropdown class
-                $("html").click(function () {
-                    $(".nav-dropdown").hide();
-                });
-                // Toggle open and close nav styles on click
-                $("#nav-toggle").click(function () {
-                    $("nav ul").slideToggle();
-                });
-                // Hamburger to X toggle
-                $("#nav-toggle").on("click", function () {
-                    this.classList.toggle("active");
-                });
-            }); // end DOM ready
-        })(jQuery); // end jQuery
-
-
-        /* Date Piker Jquery-UI */
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-        /* Multi-select*/
-        $(document).ready(function () {
-            $('#days').multiselect({
-                buttonClass: 'fm-control',
-                buttonWidth: '100%',
-                numberDisplayed: 2,
-                includeSelectAllOption: true
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap-multiselect.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/datepair.js"></script>
+        <script src="js/jquery.datepair.js"></script>
+        <script src="js/jquery.timepicker.min.js"></script>
+        <script>
+            // initialize input widgets first
+            $('#datetime .time').timepicker({
+                'showDuration': true,
+                'timeFormat': 'g:ia'
             });
-        });
-        /* When the user clicks on the button, 
-                    toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
+            $('#datetime .date').datepicker({
+                'format': 'yyyy-m-d',
+                'autoclose': true
+            });
 
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
+            // initialize datepair
+            $('#datetime').datepair();
+        </script>
+
+        <script>
+            window.BaseScripts = {
+                navToggle: function () {
+                    var trigger = $('.eok-nav-toggle');
+                    var target = $('.nav-wrapper');
+
+                    console.log(trigger)
+
+                    trigger.on('click', function () {
+                        console.log('here')
+                        target.toggle();
+                    });
+                },
+                init: function () {
+                    this.navToggle();
                 }
             }
-        }
-    </script>
+
+            window.LandingPage = {
+                init: function () {
+                    $('#days').multiselect({
+                        buttonClass: 'fm-control',
+                        buttonWidth: '100%',
+                        numberDisplayed: 2,
+                        includeSelectAllOption: true
+                    });
+                    $("#datepicker").datepicker();
+                }
+            }
+
+            window.BaseScripts.init();
+            window.LandingPage.init();
+        </script>
 </body>
 
 </html>
