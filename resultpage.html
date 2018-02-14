@@ -68,18 +68,18 @@
                     <div class="mt-2">From</div>
                     <div class="row">
                         <div class="col">
-                            <div class="d-flex mb-2" id="datetime">
-                                <input type="text" placeholder=" Date" class="fm-control date start w-100" />
-                                <input type="text" placeholder=" Time" class="fm-control time start w-100" />
+                            <div class="d-flex mb-2" id="fromPicker">
+                                <input type="text" placeholder="02/20/2018" id="startdate" class="fm-control date start w-100" />
+                                <input type="text" placeholder="12:00pm" id="starttime" class="fm-control time start w-100" />
                             </div>
                         </div>
                     </div>
                     <div>To</div>
                     <div class="row">
                         <div class="col">
-                            <div class="d-flex fm-group" id="datetime">
-                                <input type="text" placeholder="Date" class="fm-control date end w-100" />
-                                <input type="text" placeholder="Time" class="fm-control time end w-100" />
+                            <div class="d-flex fm-group" id="toPicker">
+                                <input type="text" placeholder="02/20/2018" id="enddate" class="fm-control date end w-100" />
+                                <input type="text" placeholder="02:00pm" id="endtime" class="fm-control time end w-100" />
                             </div>
                         </div>
                     </div>
@@ -170,53 +170,36 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col" style="max-width:220px">
-                                <img src="images/bg1.jpg" width="100%">
+                                <a href="#"><img src="images/bg1.jpg" width="100%"></a>
                             </div>
                             <div class="col-12 d-md-none d-xl-none d-lg-none"></div>
                             <div class="col">
-                                <h4>Class Name</h4>
+                                <a href="#"><h4>Class Name</h4></a>
                                 <h6>Business Name</h6>
                                 <p>IPhone salvia YOLO paleo pitchfork etsy cliche tofu meh mlkshk schlitz blue bottle adaptogen
                                     wolf tousled. Kogi readymade kale chips enamel pin activated charcoal. Microdosing man
-                                    bun drinking vinegar truffaut retro yr. Fanny pack chia four dollar toast before they
-                                    sold out austin shoreditch taxidermy roof party microdosing cronut vexillologist bitters
-                                    fingerstache waistcoat marfa.</p>
-
-                                <div class="col">
-                                    <span class="eok-tags">Days</span>
-                                    <span class="eok-tags">Date</span>
-                                    <span class="eok-tags">Total Cost</span>
-                                    <span class="eok-tags">Age</span>
-                                    <span class="eok-tags">Address</span>
-                                    <span class="eok-tags">Phone</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col" style="max-width:220px">
-                                <img src="images/bg1.jpg" width="100%">
-                            </div>
-                            <div class="col-12 d-md-none d-xl-none d-lg-none"></div>
-                            <div class="col">
-                                <h4>Class Name</h4>
-                                <h6>Business Name</h6>
-                                <p>IPhone salvia YOLO paleo pitchfork etsy cliche tofu meh mlkshk schlitz blue bottle adaptogen
-                                    wolf tousled. Kogi readymade kale chips enamel pin activated charcoal. Microdosing man
-                                    bun drinking vinegar truffaut retro yr. Fanny pack chia four dollar toast before they
-                                    sold out austin shoreditch taxidermy roof party microdosing cronut vexillologist bitters
-                                    fingerstache waistcoat marfa.</p>
-
-                                <div class="col">
-                                    <span class="eok-tags">Days</span>
-                                    <span class="eok-tags">Date</span>
-                                    <span class="eok-tags">Total Cost</span>
-                                    <span class="eok-tags">Age</span>
-                                    <span class="eok-tags">Address</span>
-                                    <span class="eok-tags">Phone</span>
+                                    fingerstache waistcoat marfa. <a href="#">Read More</a></p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fontsize-14">Days
+                                        <span>Mon,Tues,Wed</span></div>
+                                        <div class="fontsize-14">Start Date</div>
+                                        <span>Feb 16, 2018</span>
+                                        </div>
+                                        <div class="col">
+                                             <div class="fontsize-14">Total Cost</div>
+                                             <span>$15</span>
+                                        <div class="fontsize-14">Age
+                                        <span>8-11</span></div>
+                                        </div>
+                                        <div class="col">
+                                        <div class="fontsize-14">Address</div>
+                                        <span>B-25 Sector 2 Noida</span>
+                                        <div class="fontsize-14">Phone No.</div>
+                                        <span>1234567890</span>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -240,18 +223,28 @@
         <script src="js/jquery.timepicker.min.js"></script>
         <script>
             // initialize input widgets first
-            $('#datetime .time').timepicker({
+            $('#fromPicker .time').timepicker({
                 'showDuration': true,
                 'timeFormat': 'g:ia'
             });
 
-            $('#datetime .date').datepicker({
+            $('#fromPicker .date').datepicker({
                 'format': 'yyyy-m-d',
                 'autoclose': true
             });
 
+            $('#toPicker .date').datepicker({
+                'format': 'yyyy-m-d',
+                'autoclose': true
+            });
+
+            $('#toPicker .time').timepicker({
+                'showDuration': true,
+                'timeFormat': 'g:ia'
+            });
+
             // initialize datepair
-            $('#datetime').datepair();
+            // $('#datetime').datepair();
         </script>
 
         <script>

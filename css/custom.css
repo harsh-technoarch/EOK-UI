@@ -111,6 +111,7 @@ img {
 .eok-aside {
     max-width: 400px;
     background-color: #F4F4F4
+    box-shadow : 0px 2px 6px rgba(0, 0, 0, .16) ;
 }
 
 .eok-detail-aside {

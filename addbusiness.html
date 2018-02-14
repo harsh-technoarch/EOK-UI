@@ -49,7 +49,7 @@
     <section class="section section-intro">
      <div class="container">
             <div class="row justify-content-center">
-                <div class="col" style="max-width: 500px">
+                <div class="col" style="max-width: 800px">
                     <div class="card mt-5 ">
                         <div class="card-body">
                             <form class="horizontal-form">
@@ -64,34 +64,17 @@
                                 </div>
 
                                 <!-- Text input-->
-                                <div class="fm-group">
-                                    <label class="col-md-12" for="product_name">Select Catagory</label>
+                               <div class="fm-group">
+                                    <label class="col-md-12" for="catagory">Catagory</label>
                                     <div class="col-md-12">
-                                        <label for="categoryAll" class="category-label">
-                                            <input type="radio" name="category" class="radio" id="categoryAll" />
-                                            <div class="category-button">All</div>
-                                        </label>
-                                        <label for="categoryMusicArts" class="category-label">
-                                            <input type="radio" name="category" class="radio" value="Music & Arts" id="categoryMusicArts" />
-                                            <div class="category-button">Music & Arts</div>
-                                        </label>
-                                        <label for="categoryFitness" class="category-label">
-                                            <input type="radio" name="category" class="radio" value="Sports & Fitness" id="categoryFitness" />
-                                            <div class="category-button">Sports & Fitness</div>
-                                        </label>
-                                        <label for="categoryReading" class="category-label">
-                                            <input type="radio" name="category" class="radio" id="categoryReading" />
-                                            <div class="category-button">Maths & Reading</div>
-                                        </label>
-                                        <label for="categoryScience" class="category-label">
-                                            <input type="radio" name="category" class="radio" id="categoryScience" />
-                                            <div class="category-button">Science & Engineering</div>
-                                        </label>
-                                        <label for="categoryTechnology" class="category-label">
-                                            <input type="radio" name="category" class="radio" id="categoryTechnology" />
-                                            <div class="category-button">Technology</div>
-                                        </label>
-
+                                        <select id="catagory" class="fm-control" multiple="multiple">
+                                            <option value="summercamp">Summer Camp</option>
+                                            <option value="music">Music & Arts</option>
+                                            <option value="sports">Sports & Fitness</option>
+                                            <option value="maths">Maths & Reading</option>
+                                            <option value="science">Science & Engineering</option>
+                                            <option value="technology">Technology</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -286,7 +269,19 @@
                         buttonClass: 'fm-control',
                         buttonWidth: '100%',
                         numberDisplayed: 2,
-                        includeSelectAllOption: true
+                        includeSelectAllOption: true,
+                        buttonText: function(options, select) {
+                         return 'Select Days';
+                        }
+                    });
+                    $('#catagory').multiselect({
+                        buttonClass: 'fm-control',
+                        buttonWidth: '100%',
+                        numberDisplayed: 2,
+                        includeSelectAllOption: true,
+                        buttonText: function(options, select) {
+                        return 'Select Catagory';
+                        }
                     });
                     $("#datepicker").datepicker();
                 }
